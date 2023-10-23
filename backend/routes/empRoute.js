@@ -55,7 +55,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Route to find an employee ************
+// Route to find an employee ************ missing (find by various data)
 router.get("/:param", async (req, res) => {
   try {
     ///////////////////////////////conditional search
@@ -70,7 +70,7 @@ router.get("/:param", async (req, res) => {
   }
 });
 
-// Route to edit employee info ************
+// Route to edit employee info ************ missing (find by various data)
 router.put("/:param", async (req, res) => {
   try {
     const { param } = req.params;
@@ -90,7 +90,7 @@ router.put("/:param", async (req, res) => {
   }
 });
 
-// Route to delete an employee ************
+// Route to delete an employee ************ missing (find by various data)
 router.delete("/:param", async (req, res) => {
     try {
       const { param } = req.params;
