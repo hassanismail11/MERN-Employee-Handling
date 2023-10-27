@@ -3,6 +3,21 @@ import { Employee } from "../models/empModel.js";
 
 const router = express.Router();
 
+// Route to get all employees
+router.get("/", async (req, res) => {
+  try {
+    const employees = await Employee.find({});
+
+    return res.status(200).json({
+      count: employees.length,
+      data: employees,
+    });
+  } catch (error) {
+    console.log(error.message);
+    res.send({ message: error.message });
+  }
+});
+
 // Route to add a new employee
 router.post("/", async (req, res) => {
   try {
@@ -34,21 +49,6 @@ router.post("/", async (req, res) => {
     };
     const employee = await Employee.create(newEmployee);
     return res.send(employee);
-  } catch (error) {
-    console.log(error.message);
-    res.send({ message: error.message });
-  }
-});
-
-// Route to get all employees
-router.get("/", async (req, res) => {
-  try {
-    const employees = await Employee.find({});
-
-    return res.status(200).json({
-      count: employees.length,
-      data: employees,
-    });
   } catch (error) {
     console.log(error.message);
     res.send({ message: error.message });

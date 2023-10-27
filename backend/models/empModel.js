@@ -17,7 +17,7 @@ const empSchema = mongoose.Schema({
       type: String,
     },
     phone: {
-      type: Number,
+      type: String,
       required: true,
     },
     imageUrl: {
@@ -31,7 +31,6 @@ const empSchema = mongoose.Schema({
     },
     role: {
       type: String,
-      required: true,
     },
     startDate: {
       type: String,
