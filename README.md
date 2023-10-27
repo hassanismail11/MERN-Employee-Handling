@@ -1,5 +1,5 @@
 # Employee-Management-System
-This is a Full fledged Employee management system (CRUD operation) in MERN stack.
+This is a 3-Level Employee management system (CRUD operation) in MERN stack.
 
 This repo contains two folders one for the server and another for the Client.
 
